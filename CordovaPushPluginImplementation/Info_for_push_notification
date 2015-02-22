@@ -9,8 +9,8 @@ Mobile : Nexus 4
 Implementation on client app :
 
 step 1) create new project on cloud.google.com/console/project and enable Google Cloud Messaging Service.
-	Note down the project ID eg. 941079637736 in my case -- used in client side.
-	Note down api-key =" AIzaSyDdgcgIC67vDRtAjmeB37tnw6BlsS_neqc"  which is used by our local php server.
+	Note down the project ID eg. 941079645636 in my case -- used in client side.
+	Note down api-key =" AIzaSyDdgcgIC67lkdkKKld37tnw6BlsS_neqc"  which is used by our local php server.
 
 step 2) create new cordova project, build and run it.
 
@@ -36,7 +36,7 @@ step 4) open SimplePushNotificationCordova/www/index.html
 			window.plugins.pushNotification.register(
 			successHandler,
 			errorHandler,
-			{"senderID":"941079637736",
+			{"senderID":"941079645636",
 			 "ecb":"onNotificationGCM"
 			});	
 		}
@@ -94,8 +94,8 @@ step 6) Develop server app in php to store regID and send request to GCM.
 	define("DB_PASSWORD","12345");
 	define("DB_DATABASE","gcm");
 	
-	define("GOOGLE_API_KEY","AIzaSyDdgcgIC67vDRtAjmeB37tnw6BlsS_neqc");
-	define("SENDER_ID","941079637736");
+	define("GOOGLE_API_KEY","AIzaSyDdgcgIC67lkdkKKld37tnw6BlsS_neqc");
+	define("SENDER_ID","941079645636");
  
         // Set POST variables
         $url = 'https://android.googleapis.com/gcm/send';
